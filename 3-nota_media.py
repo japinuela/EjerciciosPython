@@ -11,13 +11,14 @@ notas = input("Introduce las notas separadas por comas: ")
 #Quiero efectivamente que utiliceis list comprehensions
 notas = [float(nota) for nota in notas.split(",")]
 
-print(notas)
-media = sum(notas) / len(notas)
-if media < NOTA_MIN:
-    media = 4.5
 
 #FORMA 1. Bucle FOR nota in notas:
 #FORMA 2. Lambda directo o con una función
 #3,5,7 > La nota final es 3
 #5,7,9 > La nota final es 7
-print(f"La nota final es: {media}")
+
+media = (lambda n: sum(n)/len(n) if all(x >= NOTA_MIN for x in n) else min(n))(notas)
+
+
+#media = (lambda n: .... )(notas)
+print(f"La nota final es: {media:.2f}")
