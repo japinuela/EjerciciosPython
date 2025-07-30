@@ -7,10 +7,8 @@ nombre = input("¿Cuál es tu nombre? ")
 print("Hola, " , nombre)
 
 '''
-f-strings
+F-strings
 '''
-
-
 print("-"*100)
 print(f'Hola, {nombre.upper()}!')
 
