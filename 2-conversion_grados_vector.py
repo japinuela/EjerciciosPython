@@ -2,6 +2,9 @@ import numpy as np
 
 farenheits = np.array([32, 50, 68, 86, 104, 122, 140, 158, 176, 194, 212])
 farenheits = np.random.randint(32, 213, size=20)
+# Crear un array desde el cero absoluto hasta 212°F (aprox 100°C)
+# con incrementos de 20°F
+farenheits = np.arange(-459.67, 213, 20)
 
 print(f'Farenheits: {farenheits} ºF')
 #Vectorizada
