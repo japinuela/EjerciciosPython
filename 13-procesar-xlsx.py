@@ -7,3 +7,14 @@ a.	Con un diccionario que acumule en region[nombre] la población total.
 b.	Con Pandas utilizando el método groupBy y sum
 Resuelva el ejercicio en GoogleCollab para gestionar ficheros externos tanto de entrada como de salida.
 '''
+
+import pandas as pd
+
+# Cargar el archivo Excel
+df = pd.read_excel('./data/country_population.xlsx', usecols=['Country Name', 'Region', 'Population'])
+print(df.head())
+
+#agg_df = df.groupby('Region')['Population'].sum().reset_index()
+
+agg_df = df.groupby('Region', as_index=False)['Population'].sum()
+agg_df.to_csv('./data/region_population.csv', index=False)
