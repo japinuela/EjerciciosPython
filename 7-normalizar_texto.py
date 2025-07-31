@@ -1,7 +1,6 @@
 '''
 7.	Crea una función para normalizar strings (minúsculas, quitar las tildes de las vocales, eliminar puntos y comas…).
 '''
-
 import pandas as pd
 from unidecode import unidecode
 import re
