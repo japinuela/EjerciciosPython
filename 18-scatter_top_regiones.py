@@ -26,7 +26,7 @@ for idx, (ax, region) in enumerate(zip(axes, regiones)):
     
     # Scatter de todos los países de la región
     ax.scatter(datos_region['Rank'], datos_region['Population'], 
-               color=colors[idx % len(colors)], alpha=0.7, edgecolor='k')
+    color=colors[idx % len(colors)], alpha=0.7, edgecolor='k')
     
     # Poner etiquetas solo a los top 3
     top3 = datos_region.head(3)
@@ -44,7 +44,7 @@ for idx, (ax, region) in enumerate(zip(axes, regiones)):
     ax.tick_params(axis='x', labelsize=8)
     ax.tick_params(axis='y', labelsize=8)
 
-# === 6️⃣ Apagar los subplots vacíos ===
+#=== 6️⃣ Apagar los subplots vacíos ===
 for i in range(len(regiones), len(axes)):
     axes[i].axis('off')
 

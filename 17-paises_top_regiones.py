@@ -13,7 +13,7 @@ top3 = (df.sort_values(['Region', 'Population'], ascending=[True, False])
 # === 3️⃣ Lista de regiones ===
 regiones = top3['Region'].unique()
 
-# === 4️⃣ Definir cuántas columnas queremos (ej. 6) ===
+# === 4️⃣ Definir cuántas columnas queremos (ej. 4) ===
 ncols = 4
 nrows = math.ceil(len(regiones) / ncols)
 
